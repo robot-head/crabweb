@@ -55,7 +55,9 @@ switch (platform) {
   case 'win32':
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, 'crabweb.win32-x64-msvc.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'crabweb.win32-x64-msvc.node')
+        )
         try {
           if (localFileExisted) {
             nativeBinding = require('./crabweb.win32-x64-msvc.node')
@@ -67,7 +69,9 @@ switch (platform) {
         }
         break
       case 'ia32':
-        localFileExisted = existsSync(join(__dirname, 'crabweb.win32-ia32-msvc.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'crabweb.win32-ia32-msvc.node')
+        )
         try {
           if (localFileExisted) {
             nativeBinding = require('./crabweb.win32-ia32-msvc.node')
@@ -79,7 +83,9 @@ switch (platform) {
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'crabweb.win32-arm64-msvc.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'crabweb.win32-arm64-msvc.node')
+        )
         try {
           if (localFileExisted) {
             nativeBinding = require('./crabweb.win32-arm64-msvc.node')
@@ -109,7 +115,9 @@ switch (platform) {
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'crabweb.darwin-arm64.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'crabweb.darwin-arm64.node')
+        )
         try {
           if (localFileExisted) {
             nativeBinding = require('./crabweb.darwin-arm64.node')
@@ -143,7 +151,9 @@ switch (platform) {
     switch (arch) {
       case 'x64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, 'crabweb.linux-x64-musl.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'crabweb.linux-x64-musl.node')
+          )
           try {
             if (localFileExisted) {
               nativeBinding = require('./crabweb.linux-x64-musl.node')
@@ -154,7 +164,9 @@ switch (platform) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, 'crabweb.linux-x64-gnu.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'crabweb.linux-x64-gnu.node')
+          )
           try {
             if (localFileExisted) {
               nativeBinding = require('./crabweb.linux-x64-gnu.node')
@@ -168,7 +180,9 @@ switch (platform) {
         break
       case 'arm64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, 'crabweb.linux-arm64-musl.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'crabweb.linux-arm64-musl.node')
+          )
           try {
             if (localFileExisted) {
               nativeBinding = require('./crabweb.linux-arm64-musl.node')
@@ -179,7 +193,9 @@ switch (platform) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, 'crabweb.linux-arm64-gnu.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'crabweb.linux-arm64-gnu.node')
+          )
           try {
             if (localFileExisted) {
               nativeBinding = require('./crabweb.linux-arm64-gnu.node')
@@ -192,7 +208,9 @@ switch (platform) {
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'crabweb.linux-arm-gnueabihf.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'crabweb.linux-arm-gnueabihf.node')
+        )
         try {
           if (localFileExisted) {
             nativeBinding = require('./crabweb.linux-arm-gnueabihf.node')

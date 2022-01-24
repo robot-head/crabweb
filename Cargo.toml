@@ -8,8 +8,15 @@ crate-type = ["cdylib"]
 
 [dependencies]
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
-napi = { version = "2.0.3", default-features = false, features = ["napi4"] }
+napi = { version = "2.0.3", default-features = false, features = [
+  "napi4",
+  "latin1",
+  "async",
+  "serde-json",
+  "experimental",
+] }
 napi-derive = "2.0.7"
+rocket = { version = "0.5.0-rc.1", features = ["secrets", "tls", "json"] }
 
 [build-dependencies]
 napi-build = "1.2.1"
